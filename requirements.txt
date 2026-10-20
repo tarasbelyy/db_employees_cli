@@ -1,0 +1,4 @@
+mimesis==19.1.0
+psycopg2-binary==2.9.12
+tabulate==0.10.0
+dotenv==0.9.9

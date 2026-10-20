@@ -1,0 +1,14 @@
+WITH RECURSIVE org AS (
+  SELECT id, full_name, position, manager_id, 1 AS lvl, ARRAY[id] as pth
+  FROM employees
+  WHERE manager_id IS NULL
+
+  UNION ALL
+
+  SELECT e.id, e.full_name, e.position, e.manager_id, org.lvl + 1, pth || e.id
+  FROM employees e
+  JOIN org ON e.manager_id = org.id
+)
+SELECT id, full_name, position, manager_id, lvl, pth
+FROM org
+ORDER BY pth;
