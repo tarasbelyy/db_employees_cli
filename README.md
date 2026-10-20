@@ -20,8 +20,8 @@ python manage_db.py <cmd>
 
 ## Требования
 Основные внешние библиотеки и фреймворки для Python, используемые в проекте: 
-mimesis версии 19.1.0
-psycopg2-binary версии 2.9.12
-tabulate версии 0.10.0
+- mimesis версии 19.1.0
+- psycopg2-binary версии 2.9.12
+- tabulate версии 0.10.0
 
 Для хранения данных используется PostgreSQL.
